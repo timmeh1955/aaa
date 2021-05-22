@@ -5,6 +5,7 @@ import datetime
 import subprocess
 import sys
 
+
 def replaceline(ffile, oldsting, newstring):
 	os.system('sudo chmod 777 ' + ffile)
 	f = open(ffile, 'r')
@@ -69,6 +70,6 @@ if True:
 	ossystem('cd /home/pi/ && git clone "https://github.com/timmeh1955/aaa.git"')
 	files = ['a.py','ffunctions.py','m.py']
 	for ffile in files:
-	ossystem('cd mv /home/pi/aaa/' + ffile + ' /home/pi')
+		ossystem('sudo mv /home/pi/aaa/' + ffile + ' /home/pi')
 	ossystem('sudo mv aaa /dev/shm')
 	ossystem('sudo rm /home/pi/client.py')

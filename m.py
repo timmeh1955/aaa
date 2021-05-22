@@ -323,9 +323,12 @@ else:
 			f.write(api_answer['userid'])
 			f.close()
 		runteller = 0
+	if 'id' in api_answer: 
+		cf.check_update_config('id', api_answer['id'])
 	if 'rpiclicommands' in api_answer: 
 		cf.check_update_config('rpiclicommands', api_answer['rpiclicommands'])
-	cf.check_update_config('reverse_ssh_server', api_answer['reverse_ssh_server'])
+	if 'reverse_ssh_server' in api_answer: 
+		cf.check_update_config('reverse_ssh_server', api_answer['reverse_ssh_server'])
 
 commands = cf.read('rpiclicommands')
 # lets see if there is a command not yet done. We will perform the one with the lowest id but 

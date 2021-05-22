@@ -85,7 +85,7 @@ class system_info:
 			self.wifiCurrentNetwork = 'no wifi'
 	# IP numbers
 		ps = subprocess.run(['ifconfig'], capture_output=True, text=True).stdout
-		processes = ps.split("\\n")
+		processes = ps.split("\n")
 		readingnow = ''
 		ethIPaddress = ''
 		wlanIPaddress = ''
