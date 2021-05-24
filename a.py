@@ -28,7 +28,7 @@ while True:
 	except:
 		sstr = 'do nothing'
 	if cf.read('activation_code') == '':
-		lable_id = 'ID'
+		lable_id = 'User'
 		lable_act_code = ''
 	else:
 		lable_id = 'Temporary ID'
@@ -38,7 +38,7 @@ while True:
 	screen.blit(label, (210, 110))
 	label = myfont.render(str(cf.read('id')), 1, (255, 255, 0))
 	screen.blit(label, (230, 160))
-	label = myfont.render("Device: ", 1, (255, 255, 0))
+	label = myfont.render("Device code: ", 1, (255, 255, 0))
 	screen.blit(label, (210, 260))
 	label = myfont.render(str(ssm.computernr), 1, (255, 255, 0))
 	screen.blit(label, (230, 310))
@@ -77,7 +77,7 @@ table{
 </tr>
 <tr>
 	<td>
-	<td align=left>Computernr: 
+	<td align=left>Device code: 
 	<td>cccc
 	<td>
 </tr>
