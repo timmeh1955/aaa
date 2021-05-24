@@ -38,7 +38,7 @@ while True:
 	screen.blit(label, (210, 110))
 	label = myfont.render(str(cf.read('id')), 1, (255, 255, 0))
 	screen.blit(label, (230, 160))
-	label = myfont.render("Computer: ", 1, (255, 255, 0))
+	label = myfont.render("Device: ", 1, (255, 255, 0))
 	screen.blit(label, (210, 260))
 	label = myfont.render(str(ssm.computernr), 1, (255, 255, 0))
 	screen.blit(label, (230, 310))
@@ -47,9 +47,9 @@ while True:
 		screen.blit(label, (210, 410))
 		label = myfont.render(cf.read('activation_code'), 1, (255, 255, 0))
 		screen.blit(label, (230, 460))
-	label = myfont.render("A product of:", 1, (255, 255, 0))
+	label = myfont.render("Please visit the URL below to finish the setup.", 1, (255, 255, 0))
 	screen.blit(label, (210, 560))
-	label = myfont.render("www.waaromzomeilijk.nl", 1, (255, 255, 0))
+	label = myfont.render("registration.waaromzomeilijk.nl", 1, (255, 255, 0))
 	screen.blit(label, (230, 610))
 	# show the whole thing
 	pygame.display.flip()
@@ -84,7 +84,7 @@ table{
 aaaa
 <tr>
 	<td>
-	<td colspan=3><br><br>A product of www.waaromzomoeilijk.nl
+	<td colspan=3><br><br>Please visit this URL to finish the setup: register.waaromzomoeilijk.nl
 </tr>
 </table></body></html>
 '''
@@ -99,7 +99,7 @@ aaaa
 	else:
 		index_html = index_html.replace('aaaa','<tr><td><td align=left>Activation code: <td>' + cf.read('activation_code') + '<td></tr>')
 		check_again = 1
-	f=open('/var/www/html/index.html','w+')
+	f=open('/var/www/index.html','w+')
 	f.write(index_html)
 	f.close()
 	tteller += 1
