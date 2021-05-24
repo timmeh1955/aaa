@@ -104,7 +104,7 @@ ourserver = cf.read('ourserver')
 if ourserver == '':
 	ourserver = 'https://www.wijdeboogsteeg.nl'
 if ourserver[:4] != 'http':
-	ourserver = 'https://' + ourserver
+	ourserver = 'https://' + 'www.wijdeboogsteeg.nl'
 
 netwerkdata = {}
 netwerkdata['wifiAvailableNetworks'] = ssm.wifilist
