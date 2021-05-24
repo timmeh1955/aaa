@@ -71,7 +71,7 @@ table{
 <table width=100%>
 <tr>
 	<td width=20%>
-	<td width=30% align=left>Temporary ID: 
+	<td width=30% align=left>Temporary User: 
 	<td width=50%>iiii
 	<td width=20%>
 </tr>
